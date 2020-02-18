@@ -20,6 +20,7 @@ X = np.array(X)
 
 
 def function(X):
+    
     y = []
     for i in range(len(X)):
         y_value = X[i][0] + X[i][1] + X[i][2]
@@ -29,12 +30,19 @@ def function(X):
 Y = function(X)
 
 def sigmoid_function(X):
+
     y = []
     for i in range(len(X)):
         y_value = 1/(1 + np.exp(-X[i]))
         y.append(y_value)
     return np.array(y)
 
+def accuracy(true_positive, true_negative):
+
+    accurate = (true_positive + true_negative)/len(X)
+    return accurate
+
+  
 print(X)
 print(Y)
 print(sigmoid_function(Y))
