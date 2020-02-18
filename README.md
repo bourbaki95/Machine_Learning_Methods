@@ -2,4 +2,5 @@
 A compilation of multiple implementations of machine learning methods.
 
 *Linear Regression
+
 *Logistic Regression
