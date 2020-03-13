@@ -1,3 +1,10 @@
+"""
+I acknowledge the partial or complete use of code retrieved from the following sources:
+
+Geron Aurelien (2017), Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems. O'Reilly Media, Inc
+
+Jiang Feng (2020), Notes and Slides for a Machine Learning Course (CS 3120), Spring Semester 2020 MSU Denver.
+"""
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -56,7 +63,7 @@ plt.figure()
 y_pred_proba = logreg.predict_proba(X_test)[::,1]
 fpr, tpr, _ = metrics.roc_curve(y_test,  y_pred_proba)
 auc = metrics.roc_auc_score(y_test, y_pred_proba)
-plt.plot(fpr,tpr,label="data 1, auc="+str(auc))
+plt.plot(fpr,tpr,label="auc="+str(auc))
 plt.legend(loc=4)
 plt.show()
 
