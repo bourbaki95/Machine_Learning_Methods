@@ -1,5 +1,6 @@
 import os 
 import cv2 
+import numpy as np 
 
 data = []
 labels = []
@@ -13,6 +14,3 @@ for class_name in class_folders:
         image = cv2.resize(image, (32, 32),interpolation=cv2.INTER_CUBIC)
         data.append(image)
         labels.append(class_name)
-print(len(data))
-print(len(labels))
-print( labels [-1])
