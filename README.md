@@ -5,6 +5,8 @@ A compilation of multiple implementations of machine learning methods.
 
 *Logistic Regression
 
+*KNN Classifier
+
 For the classes and modules found in this repository, I acknowledge the partial or complete use of code retrieved from the following sources:
 
 * Geron Aurelien (2017), Hands-On Machine Learning with Scikit-Learn and TensorFlow: 
