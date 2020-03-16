@@ -51,7 +51,7 @@ def knn(train_x, test_x, train_y, test_y, neighbors, metrics):
             model = KNeighborsClassifier(n_neighbors=neighbor, p=metric)
             model.fit(train_x, train_y)
             y_predict = model.predict(test_x)
-            print("Number of neighbors= {}, L= {}".format(neighbor, metric))
+                      print("Neighborhood = {}, L{}".format(neighbor, metric))
             metrics_score(test_y, y_predict)
             print()
 
@@ -59,6 +59,13 @@ x,y = reading_data()
 x,y = loading_data(x,y)
 x,y = encoding_data(x,y)
 train_x, test_x, train_y, test_y, val_x, val_y = train_validation_test(x,y, 0.7, 0.1, 0.2)
+
+print("KNN Classifier.")
+#Cross validation for K = [3,5,7] and L = [L1,L2]
+print('Evaluating perfomance over the predictions in the validation set:')
+knn(train_x, val_x, train_y, val_y, [3,5,7], [1,2])
+#Testing the KNN classifier over the actual testing set
+print('Evaluating perfomance over the predictions in the testing set :')
 knn(train_x, test_x, train_y, test_y, [7], [1])
 
 
