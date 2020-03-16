@@ -65,7 +65,7 @@ print("KNN Classifier.")
 print('Evaluating perfomance over the predictions in the validation set:')
 knn(train_x, val_x, train_y, val_y, [3,5,7], [1,2])
 #Testing the KNN classifier over the actual testing set
-print('Evaluating perfomance over the predictions in the testing set :')
+print('Evaluating perfomance over the predictions in the testing set:')
 knn(train_x, test_x, train_y, test_y, [7], [1])
 
 
