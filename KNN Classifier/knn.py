@@ -51,7 +51,7 @@ def knn(train_x, test_x, train_y, test_y, neighbors, metrics):
             model = KNeighborsClassifier(n_neighbors=neighbor, p=metric)
             model.fit(train_x, train_y)
             y_predict = model.predict(test_x)
-                      print("Neighborhood = {}, L{}".format(neighbor, metric))
+            print("Neighborhood = {}, L{}".format(neighbor, metric))
             metrics_score(test_y, y_predict)
             print()
 
