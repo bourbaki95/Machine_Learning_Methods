@@ -4,6 +4,7 @@ import time
 import warnings
 import math
 import matplotlib.pyplot as plt
+from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
@@ -45,7 +46,7 @@ def timing(function, *arguments):
         seconds = elapsed_time - 60*minutes
     else:
         seconds = elapsed_time
-    print("Total Time Elapsed, Minutes = {}, Seconds = {}".format(minutes, seconds))
+    print("Total Time Elapsed, Minutes={}, Seconds={}".format(minutes, seconds))
 
 def train_validation_test_split(x,y, train_ratio, val_ratio, test_ratio):
     second_ratio = (val_ratio)/(train_ratio + val_ratio)
@@ -62,7 +63,7 @@ def knn(train_x, test_x, train_y, test_y, neighbors, metrics):
             model = KNeighborsClassifier(n_neighbors=neighbor, p=metric)
             model.fit(train_x, train_y)
             y_predict = model.predict(test_x)
-            print("Neighborhood = {}, L{}".format(neighbor, metric))
+            print("Neighborhood={}, L{}".format(neighbor, metric))
             metrics_score(test_y, y_predict)
             print()
 
@@ -77,17 +78,30 @@ def decision_tree(train_x, test_x, train_y, test_y, criteria):
         model = DecisionTreeClassifier(criterion= criterion)
         model.fit(train_x, train_y)
         y_predict = model.predict(test_x)
-        print("Criterion = {}".format(criterion))
+        print("Criterion={}".format(criterion))
         metrics_score(test_y, y_predict)
         print()
 
+def svm(train_x, test_x, train_y, test_y, kernels, C_factors):
+    for kernel in kernels:
+        for C in C_factors:
+            model = SVC(C=C, kernel= kernel)
+            model.fit(train_x, train_y)
+            y_predict = model.predict(test_x)
+            print("Kernel={}, C={}".format(kernel, C))
+            metrics_score(test_y, y_predict)
+            print()
+
+
 silencing_warnings()
-x,y = reading_data_MNIST()
+x,y = reading_data_BankNote()
 x = scaling_feature_data(x)
 train_x, test_x, train_y, test_y, val_x, val_y = train_validation_test_split(x,y, 0.7, 0.1, 0.2)
 print('Logistic Regression:')
-timing(logistic_regression, train_x, test_x, train_y, test_y)
+timing(logistic_regression, train_x, val_x, train_y, val_y)
 print('KNN Classifier:')
-timing(knn, train_x, test_x, train_y, test_y, [3], [1])
+timing(knn, train_x, val_x, train_y, val_y, [3,5,7], [1,2])
 print('Decision Tree:')
-timing(decision_tree, train_x, test_x, train_y, test_y, ['entropy'])
+timing(decision_tree, train_x, val_x, train_y, val_y, ['gini', 'entropy'])
+print('Support Vector Machine:')
+timing(svm,train_x, val_x, train_y, val_y, ['linear','rbf','sigmoid'], [1.0,2.0,3.0])

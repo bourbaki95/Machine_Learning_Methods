@@ -1,0 +1,206 @@
+Database: BankNote
+35% Train
+35% Test
+30% Validation
+
+Logistic Regression:
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.97      0.98       227
+         1.0       0.97      0.99      0.98       185
+
+    accuracy                           0.98       412
+   macro avg       0.98      0.98      0.98       412
+weighted avg       0.98      0.98      0.98       412
+
+Total Time Elapsed, Minutes=0, Seconds=1
+KNN Classifier:
+Neighborhood=3, L1
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00       227
+         1.0       1.00      1.00      1.00       185
+
+    accuracy                           1.00       412
+   macro avg       1.00      1.00      1.00       412
+weighted avg       1.00      1.00      1.00       412
+
+
+Neighborhood=3, L2
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00       227
+         1.0       1.00      1.00      1.00       185
+
+    accuracy                           1.00       412
+   macro avg       1.00      1.00      1.00       412
+weighted avg       1.00      1.00      1.00       412
+
+
+Neighborhood=5, L1
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00       227
+         1.0       1.00      1.00      1.00       185
+
+    accuracy                           1.00       412
+   macro avg       1.00      1.00      1.00       412
+weighted avg       1.00      1.00      1.00       412
+
+
+Neighborhood=5, L2
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00       227
+         1.0       1.00      1.00      1.00       185
+
+    accuracy                           1.00       412
+   macro avg       1.00      1.00      1.00       412
+weighted avg       1.00      1.00      1.00       412
+
+
+Neighborhood=7, L1
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99       227
+         1.0       0.98      1.00      0.99       185
+
+    accuracy                           0.99       412
+   macro avg       0.99      0.99      0.99       412
+weighted avg       0.99      0.99      0.99       412
+
+
+Neighborhood=7, L2
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99       227
+         1.0       0.98      1.00      0.99       185
+
+    accuracy                           0.99       412
+   macro avg       0.99      0.99      0.99       412
+weighted avg       0.99      0.99      0.99       412
+
+
+Total Time Elapsed, Minutes=0, Seconds=1
+Decision Tree:
+Criterion=gini
+              precision    recall  f1-score   support
+
+         0.0       0.98      1.00      0.99       227
+         1.0       0.99      0.98      0.99       185
+
+    accuracy                           0.99       412
+   macro avg       0.99      0.99      0.99       412
+weighted avg       0.99      0.99      0.99       412
+
+
+Criterion=entropy
+              precision    recall  f1-score   support
+
+         0.0       0.98      0.99      0.99       227
+         1.0       0.99      0.98      0.98       185
+
+    accuracy                           0.99       412
+   macro avg       0.99      0.98      0.99       412
+weighted avg       0.99      0.99      0.99       412
+
+
+Total Time Elapsed, Minutes=0, Seconds=1
+Support Vector Machine:
+Kernel=linear, C=1.0
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.97      0.99       227
+         1.0       0.97      1.00      0.98       185
+
+    accuracy                           0.99       412
+   macro avg       0.98      0.99      0.99       412
+weighted avg       0.99      0.99      0.99       412
+
+
+Kernel=linear, C=2.0
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.97      0.98       227
+         1.0       0.97      0.99      0.98       185
+
+    accuracy                           0.98       412
+   macro avg       0.98      0.98      0.98       412
+weighted avg       0.98      0.98      0.98       412
+
+
+Kernel=linear, C=3.0
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99       227
+         1.0       0.97      0.99      0.98       185
+
+    accuracy                           0.99       412
+   macro avg       0.98      0.99      0.99       412
+weighted avg       0.99      0.99      0.99       412
+
+
+Kernel=rbf, C=1.0
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00       227
+         1.0       1.00      1.00      1.00       185
+
+    accuracy                           1.00       412
+   macro avg       1.00      1.00      1.00       412
+weighted avg       1.00      1.00      1.00       412
+
+
+Kernel=rbf, C=2.0
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00       227
+         1.0       1.00      1.00      1.00       185
+
+    accuracy                           1.00       412
+   macro avg       1.00      1.00      1.00       412
+weighted avg       1.00      1.00      1.00       412
+
+
+Kernel=rbf, C=3.0
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00       227
+         1.0       1.00      1.00      1.00       185
+
+    accuracy                           1.00       412
+   macro avg       1.00      1.00      1.00       412
+weighted avg       1.00      1.00      1.00       412
+
+
+Kernel=sigmoid, C=1.0
+              precision    recall  f1-score   support
+
+         0.0       0.83      0.74      0.79       227
+         1.0       0.72      0.82      0.77       185
+
+    accuracy                           0.78       412
+   macro avg       0.78      0.78      0.78       412
+weighted avg       0.78      0.78      0.78       412
+
+
+Kernel=sigmoid, C=2.0
+              precision    recall  f1-score   support
+
+         0.0       0.83      0.74      0.78       227
+         1.0       0.72      0.81      0.76       185
+
+    accuracy                           0.77       412
+   macro avg       0.77      0.78      0.77       412
+weighted avg       0.78      0.77      0.77       412
+
+
+Kernel=sigmoid, C=3.0
+              precision    recall  f1-score   support
+
+         0.0       0.82      0.74      0.78       227
+         1.0       0.71      0.81      0.76       185
+
+    accuracy                           0.77       412
+   macro avg       0.77      0.77      0.77       412
+weighted avg       0.77      0.77      0.77       412
